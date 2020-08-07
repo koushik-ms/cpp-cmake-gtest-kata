@@ -22,4 +22,5 @@ target_include_directories(gtest_main PUBLIC /usr/src/googletest/googletest/)
 add_executable(kata kata.cpp)
 target_link_libraries(kata gtest gtest_main Threads::Threads)
 
-# add_custom_command(TARGET kata POST_BUILD  COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/build/kata USES_TERMINAL)
+add_test(kata kata)
+
